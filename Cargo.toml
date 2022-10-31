@@ -1,0 +1,22 @@
+[package]
+name = "rapid-crypto"
+version = "0.1.0"
+description = "A crypto library for JS written in Rust"
+authors = ["Andrea Canale"]
+license = "MIT"
+edition = "2018"
+exclude = ["index.node"]
+
+[lib]
+crate-type = ["cdylib"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+md-5 = "0.10.5"
+hex = "0.4"
+
+[dependencies.neon]
+version = "0.10"
+default-features = false
+features = ["napi-6"]

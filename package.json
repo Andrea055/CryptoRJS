@@ -1,0 +1,25 @@
+{
+  "name": "rapid-crypto",
+  "version": "0.1.0",
+  "description": "A crypto library for JS written in Rust",
+  "main": "index.node",
+  "scripts": {
+    "build": "cargo-cp-artifact -nc index.node -- cargo build --message-format=json-render-diagnostics",
+    "build-debug": "npm run build --",
+    "build-release": "npm run build -- --release",
+    "install": "npm run build-release",
+    "test": "cargo test"
+  },
+  "author": "Andrea Canale",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "cargo-cp-artifact": "^0.1"
+  },
+  "keywords": [
+    "crypto",
+    "rust",
+    "neon",
+    "node"
+  ]
+}
